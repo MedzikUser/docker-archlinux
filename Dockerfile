@@ -4,7 +4,7 @@ RUN pacman -Syu --noconfirm \
       git \
       base
 
-RUN useradd -l -G wheel,storage,power -m archie \
+RUN useradd -l -G wheel,storage,power -m -s /bin/bash -p archie \
     && sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 USER archie
