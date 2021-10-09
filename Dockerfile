@@ -1,5 +1,3 @@
-FROM archlinux:latest
+FROM archlinux:base-devel
 
-RUN pacman -Syu --noconfirm \
-      base \
-      base-devel
+RUN pacman -Syu --noconfirm
