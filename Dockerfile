@@ -9,4 +9,6 @@ RUN useradd -l -G wheel,storage,power -m -s /bin/bash -p archie \
 
 USER archie
 
+RUN sudo echo "Running 'sudo' for archie: success"
+
 RUN mkdir -p /home/archie
