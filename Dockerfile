@@ -4,7 +4,10 @@ RUN pacman -Syu --noconfirm \
       git \
       base \
       wget \
-      curl
+      curl \
+      python \
+      python-pip \
+      python-requests
 
 RUN useradd -m -d /build -s /bin/bash archie
 
