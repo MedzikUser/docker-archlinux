@@ -1,5 +1,5 @@
 FROM archlinux:latest
 
-RUN sudo pacman -Syu --noconfirm \
+RUN pacman -Syu --noconfirm \
       base \
       base-devel
