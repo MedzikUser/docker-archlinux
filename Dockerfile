@@ -2,6 +2,7 @@ FROM archlinux:base-devel
 
 RUN pacman -Syu --noconfirm \
       git \
+      git-lfs \
       base \
       wget \
       curl \
