@@ -1,5 +1,7 @@
 FROM archlinux:base-devel
 
+ADD pacman.conf /etc/pacman.conf
+
 RUN pacman -Syu --noconfirm \
       git \
       git-lfs \
