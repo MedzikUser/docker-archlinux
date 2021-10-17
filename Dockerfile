@@ -1,6 +1,7 @@
 FROM archlinux:base-devel
 
 ADD pacman.conf /etc/pacman.conf
+ADD mirrorlist /etc/pacman.d/mirrorlist
 
 RUN pacman -Syu --noconfirm \
       git \

@@ -1,0 +1,2 @@
+Server = https://mirror-arch.magicuser.cf/$repo/os/$arch
+Server = https://mirror-arch1.magicuser.cf/archlinux/$repo/os/$arch
