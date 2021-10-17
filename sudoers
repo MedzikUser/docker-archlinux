@@ -1,2 +1,2 @@
 root ALL=(ALL) ALL
-archie ALL=(ALL) NOPASSWD: ALL
+build ALL=(ALL) NOPASSWD: ALL

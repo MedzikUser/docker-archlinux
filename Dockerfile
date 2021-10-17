@@ -12,10 +12,10 @@ RUN pacman -Syu --noconfirm \
       python-pip \
       python-requests
 
-RUN useradd -m -d /build -s /bin/bash archie
+RUN useradd --create-home build
 
 ADD sudoers /etc/sudoers
 
-USER archie
+USER build
 
-RUN sudo echo "Running 'sudo' for archie: success"
+RUN sudo echo "Running 'sudo' for build: success"
