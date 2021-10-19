@@ -3,9 +3,11 @@ name: Docker
 on:
   schedule:
     - cron: '0 0 * * *'
+
   push:
     branches:
-      - latest
+      - main
+
   pull_request:
 
 jobs:
@@ -15,12 +17,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: medzik/archlinux-pkg-build
 
       - name: Login to DockerHub
         if: github.event_name != 'pull_request'
@@ -34,5 +30,4 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: medzik/archlinux-pkg-build:latest
