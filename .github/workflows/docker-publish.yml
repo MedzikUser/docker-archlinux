@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: medzik/archlinux-pkg-build:latest
+          tags: medzik/archlinux:latest
