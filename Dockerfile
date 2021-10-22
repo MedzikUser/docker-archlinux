@@ -11,7 +11,8 @@ RUN pacman -Syu --noconfirm \
       curl \
       python \
       python-pip \
-      python-requests
+      python-requests \
+ && pacman -Scc
 
 RUN useradd --create-home build
 
