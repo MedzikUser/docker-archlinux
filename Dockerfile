@@ -13,7 +13,7 @@ RUN pacman -Syu --noconfirm \
       python \
       python-pip \
       python-requests \
- && pacman -Scc
+ && yes | pacman -Scc
 
 RUN useradd --create-home build
 
