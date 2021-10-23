@@ -4,6 +4,7 @@ ADD pacman.conf /etc/pacman.conf
 ADD mirrorlist /etc/pacman.d/mirrorlist
 
 RUN pacman -Syu --noconfirm \
+      yay \
       git \
       git-lfs \
       base \
