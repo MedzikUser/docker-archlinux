@@ -10,6 +10,7 @@ RUN pacman -Syu --noconfirm \
       base \
       wget \
       curl \
+      pacman-contrib \
       python \
       python-pip \
       python-requests \
