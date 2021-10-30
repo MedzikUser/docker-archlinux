@@ -1,19 +1,22 @@
-FROM archlinux:base-devel
+FROM archlinux
 
 ADD pacman.conf /etc/pacman.conf
 ADD mirrorlist /etc/pacman.d/mirrorlist
 
 RUN pacman -Syu --noconfirm \
+ && pacman -S --noconfirm \
+      base \
+      base-devel \
       yay \
       git \
       git-lfs \
-      base \
       wget \
       curl \
       pacman-contrib \
       python \
       python-pip \
       python-requests \
+      ccache \
  && yes | pacman -Scc
 
 RUN useradd --create-home build
