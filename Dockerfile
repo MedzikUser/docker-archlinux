@@ -1,7 +1,7 @@
 FROM archlinux
 
-ADD pacman.conf /etc/pacman.conf
-ADD mirrorlist /etc/pacman.d/mirrorlist
+COPY pacman.conf /etc/pacman.conf
+COPY mirrorlist /etc/pacman.d/mirrorlist
 
 RUN pacman -Syu --noconfirm \
  && pacman -S --noconfirm \
@@ -21,8 +21,7 @@ RUN pacman -Syu --noconfirm \
 
 RUN useradd --create-home build
 
-ADD sudoers /etc/sudoers
+COPY sudoers /etc/sudoers
 
 USER build
-
 RUN sudo echo "Running 'sudo' for build: success"
