@@ -1,6 +1,7 @@
 FROM archlinux
 
 COPY pacman.conf /etc/pacman.conf
+COPY makepkg.conf /etc/makepkg.conf
 COPY mirrorlist /etc/pacman.d/mirrorlist
 
 RUN pacman -Syu --noconfirm \
