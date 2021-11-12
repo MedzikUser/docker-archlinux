@@ -4,8 +4,7 @@ COPY pacman.conf /etc/pacman.conf
 COPY makepkg.conf /etc/makepkg.conf
 COPY mirrorlist /etc/pacman.d/mirrorlist
 
-RUN pacman -Syu --noconfirm \
- && pacman -S --noconfirm \
+RUN pacman -Sy --noconfirm \
       base \
       base-devel \
       yay \
