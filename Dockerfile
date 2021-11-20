@@ -17,6 +17,7 @@ RUN pacman -Sy --noconfirm \
       python-pip \
       python-requests \
       ccache \
+      jq \
  && yes | pacman -Scc
 
 RUN useradd --create-home build
