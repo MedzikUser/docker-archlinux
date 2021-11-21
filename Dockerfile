@@ -9,14 +9,14 @@ RUN pacman -Sy --noconfirm \
       base-devel \
       yay \
       git \
-      git-lfs \
       wget \
       curl \
       pacman-contrib \
-      python \
-      python-pip \
-      python-requests \
       ccache \
+      clang \
+      llvm \
+      lld \
+      python \
       jq \
  && yes | pacman -Scc
 
