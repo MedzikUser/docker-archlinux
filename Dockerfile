@@ -18,6 +18,7 @@ RUN pacman -Sy --noconfirm \
       lld \
       python \
       jq \
+ && pacman -Syu
  && yes | pacman -Scc
 
 RUN useradd --create-home build
