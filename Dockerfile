@@ -13,9 +13,6 @@ RUN pacman -Sy --noconfirm \
       curl \
       pacman-contrib \
       ccache \
-      clang \
-      llvm \
-      lld \
       python \
       jq \
       unzip \
