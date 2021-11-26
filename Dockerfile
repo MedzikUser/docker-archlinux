@@ -18,6 +18,7 @@ RUN pacman -Sy --noconfirm \
       lld \
       python \
       jq \
+      unzip \
  && pacman -Syu --noconfirm \
  && yes | pacman -Scc
 
