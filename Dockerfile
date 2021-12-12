@@ -15,6 +15,7 @@ RUN pacman -Sy --noconfirm \
       python \
       jq \
       unzip \
+      github-cli \
  && pacman -Syu --noconfirm \
  && yes | pacman -Scc
 
