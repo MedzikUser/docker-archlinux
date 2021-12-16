@@ -7,6 +7,7 @@ COPY mirrorlist /etc/pacman.d/mirrorlist
 RUN pacman -Sy --noconfirm \
       base \
       base-devel \
+      multilib-devel \
       git \
       wget \
       curl \
