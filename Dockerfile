@@ -1,6 +1,7 @@
 FROM archlinux
 
-RUN pacman-key --recv-key 7A6646A6C14690C0 \
+RUN pacman-key --init \
+ && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
  && pacman -U 'https://arch-repo.magicuser.cf/packages/medzikuser-mirrorlist-2022.1.9-1-any.pkg.tar.xz'
 
