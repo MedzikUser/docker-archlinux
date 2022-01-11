@@ -3,7 +3,8 @@ FROM archlinux
 RUN pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
- && pacman -U --noconfirm 'https://arch-repo.magicuser.cf/packages/medzikuser-mirrorlist-2022.1.9-1-any.pkg.tar.xz'
+ && pacman -U --noconfirm 'https://arch-repo.magicuser.cf/packages/medzikuser-mirrorlist-latest-any.pkg.tar.xz' \
+ && yes | pacman -Scc
 
 COPY pacman.conf /etc/pacman.conf
 COPY makepkg.conf /etc/makepkg.conf
@@ -21,7 +22,6 @@ RUN pacman -Sy --noconfirm \
       python \
       jq \
       unzip \
-      github-cli \
  && pacman -Syu --noconfirm \
  && yes | pacman -Scc
 
