@@ -1,5 +1,7 @@
 FROM archlinux
 
+COPY resolv.conf /etc/resolv.conf
+
 RUN pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
@@ -9,7 +11,6 @@ RUN pacman-key --init \
 COPY pacman.conf /etc/pacman.conf
 COPY makepkg.conf /etc/makepkg.conf
 COPY mirrorlist /etc/pacman.d/mirrorlist
-COPY resolv.conf /etc/resolv.conf
 
 RUN pacman -Sy --noconfirm \
       base \
