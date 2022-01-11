@@ -9,6 +9,7 @@ RUN pacman-key --init \
 COPY pacman.conf /etc/pacman.conf
 COPY makepkg.conf /etc/makepkg.conf
 COPY mirrorlist /etc/pacman.d/mirrorlist
+COPY resolv.conf /etc/resolv.conf
 
 RUN pacman -Sy --noconfirm \
       base \
