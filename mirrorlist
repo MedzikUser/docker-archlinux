@@ -1,2 +1,5 @@
+Server = https://mirror-all.magicuser.cf/archlinux/$repo/os/$arch
 Server = https://mirror-arch.magicuser.cf/$repo/os/$arch
 Server = https://mirror-arch1.magicuser.cf/archlinux/$repo/os/$arch
+
+Server = http://130.225.254.116/archlinux/$repo/os/$arch
