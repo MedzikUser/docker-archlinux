@@ -5,7 +5,7 @@ COPY resolv.conf /etc/resolv.conf
 RUN pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
- && pacman -U --noconfirm 'http://5.135.168.176/packages/medzikuser-mirrorlist-latest-any.pkg.tar.xz' \
+ && pacman -U --noconfirm 'http://5.135.168.176/packages/medzikuser-mirrorlist-2022.1.18-1-any.pkg.tar.xz' \
  && yes | pacman -Scc
 
 COPY pacman.conf /etc/pacman.conf
