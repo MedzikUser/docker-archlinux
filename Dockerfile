@@ -32,4 +32,5 @@ RUN useradd --create-home build
 COPY sudoers /etc/sudoers
 
 USER build
-RUN sudo echo "Running 'sudo' for build: success"
+RUN sudo echo "Running 'sudo' for build: success" \
+ && cd /home/build
