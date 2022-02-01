@@ -5,32 +5,15 @@ COPY resolv.conf /etc/resolv.conf
 RUN pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
- && pacman -U --noconfirm 'http://5.135.168.176/packages/medzikuser-mirrorlist-2022.1.18-1-any.pkg.tar.xz' \
+ && pacman -U --noconfirm 'https://github.com/archlinux-pkg/packages/releases/download/packages/medzikuser-mirrorlist-2022.1.30-2-any.pkg.tar.xz' \
  && yes | pacman -Scc
 
 COPY pacman.conf /etc/pacman.conf
-COPY makepkg.conf /etc/makepkg.conf
 COPY mirrorlist /etc/pacman.d/mirrorlist
 
-RUN pacman -Sy --noconfirm \
-      base \
-      base-devel \
-      multilib-devel \
-      git \
-      wget \
-      curl \
-      pacman-contrib \
-      ccache \
-      python \
-      jq \
-      unzip \
- && pacman -Syu --noconfirm \
+RUN pacman -Syu --noconfirm \
  && yes | pacman -Scc
 
 RUN useradd --create-home build
 
 COPY sudoers /etc/sudoers
-
-USER build
-RUN sudo echo "Running 'sudo' for build: success" \
- && cd /home/build
