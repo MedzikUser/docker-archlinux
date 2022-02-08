@@ -2,4 +2,9 @@ Server = https://mirror-all.magicuser.cf/archlinux/$repo/os/$arch
 Server = https://mirror-arch.magicuser.cf/$repo/os/$arch
 Server = https://mirror-arch1.magicuser.cf/archlinux/$repo/os/$arch
 
-Server = http://130.225.254.116/archlinux/$repo/os/$arch
+Server = http://mirrors.kernel.org/archlinux/$repo/os/$arch
+Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch
+
+## Worldwide
+Server = http://mirror.rackspace.com/archlinux/$repo/os/$arch
+Server = https://mirror.rackspace.com/archlinux/$repo/os/$arch
