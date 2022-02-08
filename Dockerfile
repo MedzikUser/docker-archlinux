@@ -2,7 +2,7 @@ FROM archlinux
 
 COPY resolv.conf /etc/resolv.conf
 
-RUN pacman -Sy wget \
+RUN pacman -Sy --noconfirm wget \
  && pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
