@@ -6,7 +6,7 @@ RUN pacman -Sy --noconfirm wget \
  && pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
- && wget https://sourceforge.net/projects/medzik-arch/files/queue/medzikuser-mirrorlist-2022.2.8-2-any.pkg.tar.xz \
+ && wget https://sourceforge.net/projects/medzik-arch/files/queue/medzikuser-mirrorlist-2022.2.8-3-any.pkg.tar.xz \
  && pacman -U --noconfirm ./medzikuser-mirrorlist-* \
  && yes | pacman -Scc
 
