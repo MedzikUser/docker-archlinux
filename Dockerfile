@@ -2,7 +2,8 @@ FROM archlinux
 
 COPY resolv.conf /etc/resolv.conf
 
-RUN pacman-key --init \
+RUN pacman -Sy wget \
+ && pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
  && wget https://sourceforge.net/projects/medzik-arch/files/queue/medzikuser-mirrorlist-2022.2.8-2-any.pkg.tar.xz \
