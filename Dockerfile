@@ -10,7 +10,7 @@ RUN pacman -Sy --noconfirm wget \
  && pacman -U --noconfirm ./medzikuser-mirrorlist-* \
  && yes | pacman -Scc
 
-COPY pacman.conf /etc/pacman.conf
+#COPY pacman.conf /etc/pacman.conf
 COPY mirrorlist /etc/pacman.d/mirrorlist
 
 RUN pacman -Syu --noconfirm \
