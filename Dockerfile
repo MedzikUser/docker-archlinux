@@ -6,7 +6,7 @@ RUN pacman -Sy --noconfirm wget \
  && pacman-key --init \
  && pacman-key --recv-key 7A6646A6C14690C0 \
  && pacman-key --lsign-key 7A6646A6C14690C0 \
- && pacman -U --noconfirm 'https://arch-repo.magicuser.cf/medzikuser-mirrorlist-2022.2.8-3-any.pkg.tar.xz' \
+ && pacman -U --noconfirm 'https://arch-repo.magicuser.cf/medzikuser-mirrorlist.pkg.tar.xz' \
  && yes | pacman -Scc
 
 COPY pacman.conf /etc/pacman.conf
