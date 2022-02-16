@@ -1,4 +1,4 @@
-FROM archlinux
+FROM archlinux AS bootstrap
 
 COPY resolv.conf /etc/resolv.conf
 
@@ -18,3 +18,13 @@ RUN pacman -Syu --noconfirm \
 RUN useradd --create-home build
 
 COPY sudoers /etc/sudoers
+
+# Create final image
+FROM scratch
+
+COPY --from=bootstrap / /
+
+RUN ldconfig
+
+ENV LANG=en_US.UTF-8
+CMD ["/usr/bin/bash"]
