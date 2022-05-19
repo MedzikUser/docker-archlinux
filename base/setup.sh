@@ -3,9 +3,9 @@ set -e -u
 
 # Add Medzik AUR repo
 pacman-key --init
-pacman-key --recv-key 7A6646A6C14690C0
-pacman-key --lsign-key 7A6646A6C14690C0
-pacman -U --noconfirm 'https://arch-repo.magicuser.cf/medzikuser-mirrorlist.pkg.tar.xz'
+pacman-key --recv-key 02213A0493457E96
+pacman-key --lsign-key 02213A0493457E96
+pacman -U --noconfirm 'https://built-aur.medzik.workers.dev/built-mirrorlist.pkg.tar.xz'
 
 # Install packages
 PACKAGES=('base')
