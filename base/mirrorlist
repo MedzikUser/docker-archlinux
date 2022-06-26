@@ -1,6 +1,4 @@
-Server = https://mirror-all.magicuser.cf/archlinux/$repo/os/$arch
-Server = https://mirror-arch.magicuser.cf/$repo/os/$arch
-Server = https://mirror-arch1.magicuser.cf/archlinux/$repo/os/$arch
+Server = https://mirrors.medzik.xyz/archlinux/$repo/os/$arch
 
 Server = https://mirror.pkgbuild.com/$repo/os/$arch
 Server = https://europe.mirror.pkgbuild.com/$repo/os/$arch
